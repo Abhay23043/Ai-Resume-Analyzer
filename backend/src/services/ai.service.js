@@ -5,8 +5,6 @@ import { zodToJsonSchema } from "zod-to-json-schema"
 import puppeteer from "puppeteer"
 
 
-import fs from "fs"
-
 dotenv.config()
 
 const ai = new GoogleGenAI({
@@ -104,8 +102,6 @@ Do not invent experience that is not present in the resume.
                 }
             }
         })
-        console.log("AI RESPONSE:", response);
-        console.log("AI TEXT:", response?.text);
         const jsonText = normalizeJsonText(response?.text)
         if (!jsonText) {
             throw new Error('AI returned empty response for interview report.')
@@ -122,16 +118,10 @@ async function generateHtmlToPdf(htmlContent) {
     let browser
 
     try {
-        console.log("🔥 PUPPETEER_CACHE_DIR:", process.env.PUPPETEER_CACHE_DIR)
 
-        const executablePath = puppeteer.executablePath()
+        const executablePath =await puppeteer.executablePath()
 
-        console.log("🔥 Puppeteer executable path:", executablePath)
 
-        console.log(
-            "🔥 Chrome exists:",
-            fs.existsSync(executablePath)
-        )
 
         browser = await puppeteer.launch({
             headless: true,
@@ -211,8 +201,6 @@ The HTML should:
         }
     })
 
-    console.log("RESUME AI RESPONSE:", response)
-    console.log("RESUME AI TEXT:", response?.text)
 
     const jsonText = normalizeJsonText(response?.text)
 
