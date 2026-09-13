@@ -4,6 +4,9 @@ import { z } from "zod"
 import { zodToJsonSchema } from "zod-to-json-schema"
 import puppeteer from "puppeteer"
 
+
+import fs from "fs"
+
 dotenv.config()
 
 const ai = new GoogleGenAI({
@@ -125,6 +128,11 @@ async function generateHtmlToPdf(htmlContent) {
 
         console.log("🔥 Puppeteer executable path:", executablePath)
 
+        console.log(
+            "🔥 Chrome exists:",
+            fs.existsSync(executablePath)
+        )
+
         browser = await puppeteer.launch({
             headless: true,
             executablePath,
@@ -141,12 +149,10 @@ async function generateHtmlToPdf(htmlContent) {
             waitUntil: "networkidle0"
         })
 
-        const pdfBuffer = await page.pdf({
+        return await page.pdf({
             format: "A4",
             printBackground: true
         })
-
-        return pdfBuffer
 
     } finally {
         if (browser) {
