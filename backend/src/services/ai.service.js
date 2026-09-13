@@ -114,10 +114,13 @@ Do not invent experience that is not present in the resume.
         throw err
     }
 }
+
 async function generateHtmlToPdf(htmlContent) {
     let browser
 
     try {
+        console.log("🔥 PUPPETEER_CACHE_DIR:", process.env.PUPPETEER_CACHE_DIR)
+
         const executablePath = puppeteer.executablePath()
 
         console.log("🔥 Puppeteer executable path:", executablePath)
@@ -151,6 +154,7 @@ async function generateHtmlToPdf(htmlContent) {
         }
     }
 }
+
 
 async function generateResumePdf({
     resume,
