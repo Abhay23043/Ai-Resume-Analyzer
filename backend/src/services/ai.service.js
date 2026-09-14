@@ -115,10 +115,9 @@ Do not invent experience that is not present in the resume.
 }
 
 async function generateHtmlToPdf(htmlContent) {
-    let browser
+    let browser;
 
     try {
-
         browser = await puppeteer.launch({
             headless: true,
             args: [
@@ -126,21 +125,22 @@ async function generateHtmlToPdf(htmlContent) {
                 "--disable-setuid-sandbox",
                 "--disable-dev-shm-usage"
             ]
-        })
-        const page = await browser.newPage()
+        });
+
+        const page = await browser.newPage();
 
         await page.setContent(htmlContent, {
             waitUntil: "networkidle0"
-        })
+        });
 
         return await page.pdf({
             format: "A4",
             printBackground: true
-        })
+        });
 
     } finally {
         if (browser) {
-            await browser.close()
+            await browser.close();
         }
     }
 }
