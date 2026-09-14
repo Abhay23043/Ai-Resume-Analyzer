@@ -6,21 +6,677 @@ $muted: #8594ab;
 $text: #eef2fa;
 $pink: #f21c5b;
 
-.home-shell { min-height: 100vh; background: $bg; color: $text; font-family: 'Segoe UI', sans-serif; }
-.topbar { height: 48px; padding: 0 18px; border-bottom: 1px solid #202d40; display: flex; align-items: center; justify-content: space-between; }
-.brand, .topnav, .topnav a { display: flex; align-items: center; }
-.brand { gap: 9px; color: $text; font-size: 14px; font-weight: 700; text-decoration: none; }
-.brand-mark { width: 27px; height: 27px; display: grid; place-items: center; border-radius: 8px; background: $pink; font-size: 18px; }
-.brand-accent { color: $pink; }.version-pill { color: #ff7095; border: 1px solid #642138; border-radius: 10px; padding: 1px 12px; font-size: 8px; line-height: 10px; }.version-pill small { font-size: 7px; }
-.topnav { gap: 14px; height: 100%; }.topnav a { color: $muted; font-size: 10px; text-decoration: none; }.topnav a.active { border: 1px solid #30415d; border-radius: 7px; padding: 5px 10px; color: $text; background: #172238; }
-.home { max-width: 100%; padding: 25px 24px 0; }
-.page-heading { max-width: 1190px; margin: 0 auto 16px; }.page-heading h1 { margin: 0; font-size: 18px; letter-spacing: -.3px; }.page-heading p { margin: 4px 0 0; color: $muted; font-size: 11px; }.heading-version { display: inline-block; vertical-align: middle; margin-left: 5px; padding: 2px 8px; border: 1px solid #263a59; border-radius: 4px; color: $muted; font-size: 8px; line-height: 9px; font-weight: 400; }.heading-version small { font-size: 7px; }
-.interview-input-group { max-width: 1190px; margin: 0 auto; display: grid; grid-template-columns: 1.42fr 1fr; gap: 17px; }.panel { background: $panel; border: 1px solid #263752; border-radius: 13px; box-shadow: 0 10px 22px rgba(0,0,0,.12); }.job-panel { min-height: 429px; padding: 15px; display: flex; flex-direction: column; }.panel-heading { display: flex; gap: 9px; align-items: flex-start; }.section-icon { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 5px; font-size: 12px; }.section-icon.blue { color: #7795ff; background: #192649; }.section-icon.pink { color: #ff6a94; background: #341b32; }.panel h2 { margin: 0; color: $text; font-size: 11px; }.panel p { margin: 3px 0 0; color: $muted; font-size: 9px; }.required-tag, .optional-tag, .format-tag { color: #91a0bd; border: 1px solid #30415d; border-radius: 3px; padding: 2px 5px; font-size: 7px; font-weight: 400; }.required-tag { color: #9aaeff; }.format-tag { float: right; line-height: 10px; text-align: left; margin-left: 39px; }
-.panel-actions { margin-left: auto; display: flex; gap: 17px; }.panel button { border: 0; background: none; color: $muted; cursor: pointer; font-size: 9px; }.job-panel > textarea { flex: 1; min-height: 320px; margin-top: 25px; }.panel textarea { width: 100%; border: 1px solid $border; outline: none; border-radius: 9px; padding: 13px; background: $field; color: $text; resize: none; font: 11px/1.45 'Segoe UI', sans-serif; }.panel textarea::placeholder { color: $text; opacity: .95; }.field-status { display: flex; align-items: center; gap: 9px; margin-top: 10px; color: $muted; font-size: 9px; }.field-status span:first-child { color: #20c99a; }.field-status i, .status-dot { display: inline-block; width: 5px; height: 5px; margin-right: 5px; border-radius: 50%; background: #15c99b; }.field-status b { color: #75839b; }.character-count { margin-left: auto; }
-.side-column { display: flex; flex-direction: column; gap: 16px; }.resume-panel { min-height: 229px; padding: 15px; }.upload-zone { height: 101px; margin-top: 10px; border: 2px dashed #2c4163; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: $text; cursor: pointer; }.upload-icon { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid #344966; border-radius: 50%; color: #b4c4d9; font-size: 19px; }.upload-zone strong { font-size: 11px; }.upload-zone u { color: #fb657f; }.upload-zone em { font-style: normal; font-weight: 400; }.upload-zone small { color: #71829d; font-size: 9px; }.uploaded-file { height: 41px; margin-top: 10px; padding: 7px; display: flex; align-items: center; gap: 8px; border: 1px solid $border; border-radius: 8px; }.file-icon { padding: 6px; color: #f35d84; background: #3a1c3c; border-radius: 5px; }.uploaded-file strong, .uploaded-file small { display: block; }.uploaded-file strong { font-size: 10px; }.uploaded-file small { color: $muted; font-size: 8px; }.uploaded-file button:first-of-type { margin-left: auto; }.uploaded-file button { font-size: 14px; }
-.self-panel { min-height: 204px; padding: 15px; }.subsection-heading { display: flex; justify-content: space-between; }.subsection-heading > span { color: $muted; font-size: 9px; }.self-panel textarea { height: 105px; margin-top: 10px; }.quick-add { display: flex; align-items: center; gap: 7px; margin-top: 8px; color: $muted; font-size: 9px; }.quick-add button { width: 31%; min-height: 25px; border: 1px solid #233451; border-radius: 6px; color: #c4cede; line-height: 10px; }
-.generate-panel { min-height: 89px; padding: 15px; }.generate-btn { width: 100%; height: 40px; border: 0; border-radius: 8px; background: #f21c5b !important; color: white; box-shadow: 0 4px 14px rgba(242,28,91,.25); font-size: 12px; font-weight: 700; cursor: pointer; }.generate-btn:hover { background: #d40f4f !important; }.generate-btn span { margin-right: 6px; font-size: 18px; vertical-align: -2px; }.generate-panel p { text-align: center; margin-top: 9px; color: $muted; }.site-footer { min-height: 53px; margin: 46px -24px 0; padding: 0 18px; border-top: 1px solid #172438; display: flex; align-items: center; justify-content: space-between; color: $muted; font-size: 9px; }.site-footer p { margin: 0; }.site-footer b { margin: 0 9px; }.site-footer nav { display: flex; gap: 15px; }.site-footer a { color: $muted; text-decoration: none; }
+.home-shell {
+    min-height: 100vh;
+    background: $bg;
+    color: $text;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.topbar {
+    height: 48px;
+    padding: 0 18px;
+    border-bottom: 1px solid #202d40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand,
+.topnav,
+.topnav a {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    gap: 9px;
+    color: $text;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: $pink;
+    font-size: 18px;
+}
+
+.brand-accent {
+    color: $pink;
+}
+
+.version-pill {
+    color: #ff7095;
+    border: 1px solid #642138;
+    border-radius: 10px;
+    padding: 1px 12px;
+    font-size: 8px;
+    line-height: 10px;
+}
+
+.version-pill small {
+    font-size: 7px;
+}
+
+.topnav {
+    gap: 14px;
+    height: 100%;
+}
+
+.topnav a {
+    color: $muted;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.topnav a.active {
+    border: 1px solid #30415d;
+    border-radius: 7px;
+    padding: 5px 10px;
+    color: $text;
+    background: #172238;
+}
+
+.home {
+    max-width: 100%;
+    padding: 25px 24px 0;
+}
+
+.page-heading {
+    max-width: 1190px;
+    margin: 0 auto 16px;
+}
+
+.page-heading h1 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: -.3px;
+}
+
+.page-heading p {
+    margin: 4px 0 0;
+    color: $muted;
+    font-size: 11px;
+}
+
+.heading-version {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    padding: 2px 8px;
+    border: 1px solid #263a59;
+    border-radius: 4px;
+    color: $muted;
+    font-size: 8px;
+    line-height: 9px;
+    font-weight: 400;
+}
+
+.heading-version small {
+    font-size: 7px;
+}
+
+.interview-input-group {
+    max-width: 1190px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.42fr 1fr;
+    gap: 17px;
+}
+
+.panel {
+    background: $panel;
+    border: 1px solid #263752;
+    border-radius: 13px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+}
+
+.job-panel {
+    min-height: 429px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-heading {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+}
+
+.section-icon {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.section-icon.blue {
+    color: #7795ff;
+    background: #192649;
+}
+
+.section-icon.pink {
+    color: #ff6a94;
+    background: #341b32;
+}
+
+.panel h2 {
+    margin: 0;
+    color: $text;
+    font-size: 11px;
+}
+
+.panel p {
+    margin: 3px 0 0;
+    color: $muted;
+    font-size: 9px;
+}
+
+.required-tag,
+.optional-tag,
+.format-tag {
+    color: #91a0bd;
+    border: 1px solid #30415d;
+    border-radius: 3px;
+    padding: 2px 5px;
+    font-size: 7px;
+    font-weight: 400;
+}
+
+.required-tag {
+    color: #9aaeff;
+}
+
+.format-tag {
+    float: right;
+    line-height: 10px;
+    text-align: left;
+    margin-left: 39px;
+}
+
+.panel-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 17px;
+}
+
+.panel button {
+    border: 0;
+    background: none;
+    color: $muted;
+    cursor: pointer;
+    font-size: 9px;
+}
+
+.job-panel>textarea {
+    flex: 1;
+    min-height: 320px;
+    margin-top: 25px;
+}
+
+.panel textarea {
+    width: 100%;
+    border: 1px solid $border;
+    outline: none;
+    border-radius: 9px;
+    padding: 13px;
+    background: $field;
+    color: $text;
+    resize: none;
+    font: 11px/1.45 'Segoe UI', sans-serif;
+}
+
+.panel textarea::placeholder {
+    color: $text;
+    opacity: .95;
+}
+
+.field-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 10px;
+    color: $muted;
+    font-size: 9px;
+}
+
+.field-status span:first-child {
+    color: #20c99a;
+}
+
+.field-status i,
+.status-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #15c99b;
+}
+
+.field-status b {
+    color: #75839b;
+}
+
+.character-count {
+    margin-left: auto;
+}
+
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.resume-panel {
+    min-height: 229px;
+    padding: 15px;
+}
+
+.upload-zone {
+    height: 101px;
+    margin-top: 10px;
+    border: 2px dashed #2c4163;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: $text;
+    cursor: pointer;
+}
+
+.upload-icon {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #344966;
+    border-radius: 50%;
+    color: #b4c4d9;
+    font-size: 19px;
+}
+
+.upload-zone:hover {
+    border-color: #f21c5b;
+    background: rgba(242, 28, 92, 0.121);
+}
+
+#jobDescription:hover {
+    border-color: #136eee;
+    background: rgba(19, 110, 238, 0.121);
+}
+
+#selfDescription:hover {
+    border-color: #136eee;
+    background: rgba(19, 110, 238, 0.121);
+}
+
+
+.upload-zone strong {
+    font-size: 11px;
+}
+
+.upload-zone u {
+    color: #fb657f;
+}
+
+.upload-zone em {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.upload-zone small {
+    color: #71829d;
+    font-size: 9px;
+}
+
+.uploaded-file {
+    height: 41px;
+    margin-top: 10px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid $border;
+    border-radius: 8px;
+}
+
+.file-icon {
+    padding: 6px;
+    color: #f35d84;
+    background: #3a1c3c;
+    border-radius: 5px;
+}
+
+.uploaded-file strong,
+.uploaded-file small {
+    display: block;
+}
+
+.uploaded-file strong {
+    font-size: 10px;
+}
+
+.uploaded-file small {
+    color: $muted;
+    font-size: 8px;
+}
+
+.uploaded-file button:first-of-type {
+    margin-left: auto;
+}
+
+.uploaded-file button {
+    font-size: 14px;
+}
+
+.self-panel {
+    min-height: 204px;
+    padding: 15px;
+}
+
+.subsection-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subsection-heading>span {
+    color: $muted;
+    font-size: 9px;
+}
+
+.self-panel textarea {
+    height: 105px;
+    margin-top: 10px;
+}
+
+.quick-add {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 8px;
+    color: $muted;
+    font-size: 9px;
+}
+
+.quick-add button {
+    width: 31%;
+    min-height: 25px;
+    border: 1px solid #233451;
+    border-radius: 6px;
+    color: #c4cede;
+    line-height: 10px;
+}
+
+.quick-add button:hover {
+    border-color: #1c40f2;
+    background: rgba(28, 46, 242, 0.121);
+}
+
+.quick-add button:active {
+    border-color: #1c40f2;
+    background: rgba(28, 46, 242, 0.945);
+}
+.generate-panel {
+    min-height: 89px;
+    padding: 15px;
+}
+
+.generate-btn {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #f21c5b;
+    border-radius: 8px;
+    background: #222021;
+    color: white;
+    box-shadow: 0 4px 14px rgba(242, 28, 91, .25);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.generate-btn:hover {
+    border-color: #ff004c;
+    background-color: rgba(242, 28, 92, 0.937);
+}
+
+.generate-btn span {
+    margin-right: 6px;
+    font-size: 18px;
+    vertical-align: -2px;
+}
+
+.generate-panel p {
+    text-align: center;
+    margin-top: 9px;
+    color: $muted;
+}
+
+.site-footer {
+    min-height: 53px;
+    margin: 46px -24px 0;
+    padding: 0 18px;
+    border-top: 1px solid #172438;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $muted;
+    font-size: 9px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer b {
+    margin: 0 9px;
+}
+
+.site-footer nav {
+    display: flex;
+    gap: 15px;
+}
+
+.site-footer a {
+    color: $muted;
+    text-decoration: none;
+}
 
 @media (max-width: 700px) {
-    .topbar { padding: 0 16px; }.topnav { gap: 9px; }.home { padding: 25px 20px 0; }.page-heading { margin-bottom: 17px; }.page-heading h1 { font-size: 19px; line-height: 1.25; }.page-heading p { font-size: 10px; line-height: 1.5; }.heading-version { display: none; }.interview-input-group { display: flex; flex-direction: column; gap: 16px; }.job-panel { min-height: 427px; }.job-panel > textarea { min-height: 321px; margin-top: 25px; }.panel-actions { gap: 11px; }.panel-actions button:first-child { font-size: 0; }.panel-actions button:first-child::after { content: '⌘'; font-size: 12px; }.side-column { gap: 16px; }.resume-panel { min-height: 267px; }.upload-zone { height: 145px; margin-top: 14px; }.upload-zone strong { font-size: 16px; }.upload-zone small { font-size: 12px; }.uploaded-file { height: 67px; margin-top: 17px; padding: 10px; }.uploaded-file strong { font-size: 15px; }.uploaded-file small { font-size: 12px; margin-top: 3px; }.self-panel { min-height: 400px; padding: 26px; }.self-panel h2 { font-size: 18px; }.self-panel p { font-size: 15px; line-height: 1.35; margin-top: 15px; }.subsection-heading > span { font-size: 13px; }.self-panel textarea { height: 179px; margin-top: 17px; padding: 17px; font-size: 17px; line-height: 1.65; }.quick-add { flex-wrap: wrap; font-size: 13px; gap: 6px; margin-top: 14px; }.quick-add span { width: 100%; }.quick-add button { width: calc(50% - 3px); min-height: 29px; font-size: 13px; }.generate-panel { min-height: 147px; padding: 24px 26px; }.generate-btn { height: 66px; font-size: 20px; }.generate-panel p { font-size: 13px; margin-top: 13px; }.site-footer { margin: 61px -20px 0; padding: 21px 30px; display: block; font-size: 14px; line-height: 1.35; }.site-footer p { display: grid; grid-template-columns: auto 1fr; gap: 0 10px; }.site-footer b { display: none; }.site-footer nav { margin-top: 17px; gap: 20px; white-space: nowrap; }.site-footer a { font-size: 14px; }
+    .topbar {
+        padding: 0 16px;
+    }
+
+    .topnav {
+        gap: 9px;
+    }
+
+    .home {
+        padding: 25px 20px 0;
+    }
+
+    .page-heading {
+        margin-bottom: 17px;
+    }
+
+    .page-heading h1 {
+        font-size: 19px;
+        line-height: 1.25;
+    }
+
+    .page-heading p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .heading-version {
+        display: none;
+    }
+
+    .interview-input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .job-panel {
+        min-height: 427px;
+    }
+
+    .job-panel>textarea {
+        min-height: 321px;
+        margin-top: 25px;
+    }
+
+    .panel-actions {
+        gap: 11px;
+    }
+
+    .panel-actions button:first-child {
+        font-size: 0;
+    }
+
+    .panel-actions button:first-child::after {
+        content: '⌘';
+        font-size: 12px;
+    }
+
+    .side-column {
+        gap: 16px;
+    }
+
+    .resume-panel {
+        min-height: 267px;
+    }
+
+    .upload-zone {
+        height: 145px;
+        margin-top: 14px;
+    }
+
+    .upload-zone strong {
+        font-size: 16px;
+    }
+
+    .upload-zone small {
+        font-size: 12px;
+    }
+
+    .uploaded-file {
+        height: 67px;
+        margin-top: 17px;
+        padding: 10px;
+    }
+
+    .uploaded-file strong {
+        font-size: 15px;
+    }
+
+    .uploaded-file small {
+        font-size: 12px;
+        margin-top: 3px;
+    }
+
+    .self-panel {
+        min-height: 400px;
+        padding: 26px;
+    }
+
+    .self-panel h2 {
+        font-size: 18px;
+    }
+
+    .self-panel p {
+        font-size: 15px;
+        line-height: 1.35;
+        margin-top: 15px;
+    }
+
+    .subsection-heading>span {
+        font-size: 13px;
+    }
+
+    .self-panel textarea {
+        height: 179px;
+        margin-top: 17px;
+        padding: 17px;
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .quick-add {
+        flex-wrap: wrap;
+        font-size: 13px;
+        gap: 6px;
+        margin-top: 14px;
+    }
+
+    .quick-add span {
+        width: 100%;
+    }
+
+    .quick-add button {
+        width: calc(50% - 3px);
+        min-height: 29px;
+        font-size: 13px;
+    }
+
+    .quick-add button:hover {
+        border-color: #1c40f2;
+        background: rgba(28, 46, 242, 0.121);
+    }
+
+    .generate-panel {
+        min-height: 147px;
+        padding: 24px 26px;
+    }
+
+    .generate-btn {
+        height: 66px;
+        font-size: 20px;
+    }
+
+    .generate-panel p {
+        font-size: 13px;
+        margin-top: 13px;
+    }
+
+    .site-footer {
+        margin: 61px -20px 0;
+        padding: 21px 30px;
+        display: block;
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+    .site-footer p {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 10px;
+    }
+
+    .site-footer b {
+        display: none;
+    }
+
+    .site-footer nav {
+        margin-top: 17px;
+        gap: 20px;
+        white-space: nowrap;
+    }
+
+    .site-footer a {
+        font-size: 14px;
+    }
 }
